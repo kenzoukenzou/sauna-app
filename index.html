@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>サウナ検索アプリ</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="app">
+
+    <!-- 操作パネル -->
+    <div class="controls">
+      <input id="search" placeholder="サウナ検索" />
+      <label>
+        <input type="checkbox" id="only-liked" />
+        行きたいだけ表示
+      </label>
+      <button id="nearby">周辺のサウナを検索</button>
+    </div>
+
+    <!-- 地図 -->
+    <div id="map"></div>
+
+    <!-- 一覧 -->
+    <ul id="sauna-list"></ul>
+  </div>
+
+  <!-- 自作JS（module） -->
+  <script type="module" src="./script.js"></script>
+
+  <!-- Google Maps -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBg4FFlBpFT-ptNEqy88ZDWRQhFNs8IsA4&libraries=places"
+    async
+    defer
+  ></script>
+</body>
+</html>
